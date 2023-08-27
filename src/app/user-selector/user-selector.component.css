@@ -1,0 +1,40 @@
+.user-selection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ded0e1;
+    border-radius: 5px;
+    background-color: #e0d0de;
+  }
+  
+  .welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-selection-form {
+    background-color: #afaac3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+  
+  .btn-primary {
+    background-color: #3f6ea0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

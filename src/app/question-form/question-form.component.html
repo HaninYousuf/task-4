@@ -1,0 +1,35 @@
+<div class="question-form-container">
+  <h2 class="question-heading">The Questionnaire</h2>
+<div *ngIf="currentQuestionIndex < questions.length">
+  <div class="question-card">
+    <h3 class="question-text">Question {{ currentQuestionIndex + 1 }}</h3>
+    <p class="question-text">{{ questions[currentQuestionIndex].question }}</p>
+    <ul class="options-list">
+      <li *ngFor="let option of questions[currentQuestionIndex].options">
+        <label>
+          <input
+            type="radio"
+            name="question{{ currentQuestionIndex }}"
+            [value]="option"
+            [(ngModel)]="selectedOptions[currentQuestionIndex]"
+          />
+          {{ option }}
+        </label>
+      </li>
+    </ul>
+    <div class="buttons">
+    <button *ngIf="currentQuestionIndex > 0" class="btn btn-secondary" (click)="goToPreviousQuestion()" [disabled]="!selectedOptions[currentQuestionIndex]">PREVIOUS</button> 
+<button type="submit" *ngIf="currentQuestionIndex === questions.length - 1" class="btn btn-primary" (click)="submitAnswers()">Submit</button>
+<ng-container *ngIf="currentQuestionIndex < questions.length - 1">
+  <button class="btn btn-primary" (click)="goToNextQuestion()" [disabled]="!selectedOptions[currentQuestionIndex]">NEXT</button>
+</ng-container>
+</div>
+</div>
+</div>
+<div *ngIf="currentQuestionIndex === questions.length" class="mt-4">
+<h3>Thank You!</h3>
+</div>
+
+</div>
+
+

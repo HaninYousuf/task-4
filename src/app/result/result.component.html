@@ -1,0 +1,31 @@
+<!-- <div class="result-container">
+    <div class="result-content">
+      <h2 class="result-title">Result Page</h2>
+      <p>Thank you for submitting your answers!</p>
+      <p>Here are your selected options:</p>
+      <ol class="result-list">
+        <li *ngFor="let option of selectedOptions; let i = index">
+          <span class="option-number">{{ i + 1 }}</span>
+          {{ option }}
+        </li>
+      </ol>
+    </div>
+  </div>
+   -->
+
+   <div class="result-container">
+    <div class="result-content">
+      <h2 class="result-title">Result Page</h2>
+      <p>Thank you for submitting your answers!</p>
+      <p>Your score: {{ score }}</p>
+      <p>Here are your selected options:</p>
+      <ol class="result-list">
+        <li *ngFor="let option of selectedOptions; let i = index">
+          <span class="option-number">{{ i + 1 }}</span>
+          {{ option }}
+        </li>
+      </ol>
+    </div>
+  </div>
+  
+  
